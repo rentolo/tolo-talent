@@ -1,0 +1,11 @@
+[
+    {
+        "name": "tolo-talent-develop",
+        "ip": "139.59.36.32",
+        "username": "root",
+        "port":"22",
+        "beforeHooks": "",
+        "afterHooks": "",
+        "path": "/var/www/html"
+    }
+]
