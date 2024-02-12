@@ -159,6 +159,7 @@ return [
         Yajra\DataTables\DataTablesServiceProvider::class,
         App\Providers\CustomConfigServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Spatie\Html\HtmlServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------
