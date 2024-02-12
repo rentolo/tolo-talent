@@ -5,7 +5,7 @@
 
 		<div class="vidover">
 			<div class="titleTop">
-				<h3>{{__('Our Office Tour')}}</h3>
+				<h3>{{__('Turn a challenge into a chance')}}</h3>
 			</div>        
 			<p>{{$video->video_text}}</p>
 		</div>

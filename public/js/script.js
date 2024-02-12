@@ -16,6 +16,7 @@
 	window.onscroll = () => window.pageYOffset > scrollThreshold ? header.classList.add('issticky') : header.classList.remove('issticky');
 
 	
+	
 	/* ==== Testimonials Slider ==== */	
   	$(".testimonialsList").owlCarousel({      
 	   loop:true,
@@ -115,6 +116,12 @@
         $(".srchbox").click(function(e) {
             e.stopPropagation();
         });
+    }
+
+	
+
+	window.onload = () => {
+        $('#show_alert').modal('show');
     }
 	
 })(jQuery);

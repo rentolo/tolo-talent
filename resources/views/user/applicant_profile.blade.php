@@ -16,7 +16,9 @@ if(null!==($package)){
         $true = TRUE;
     }
 }
-}
+}elseif(auth()->user()->id == $user->id){
+        $true = TRUE;
+    }
 ?>
 <!-- Inner Page Title end -->
 <div class="listpgWraper">
@@ -85,8 +87,9 @@ if(null!==($package)){
 
 
                 @if(null !== $profileCv)<a href="{{asset('cvs/'.$profileCv->cv_file)}}" class="btn"><i class="fa fa-download" aria-hidden="true"></i> {{__('Download CV')}}</a>@endif
-
+                @if(auth()->check() && auth()->user()->id != $user->id)
                 <a href="javascript:;" onclick="send_message()" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Send Message')}}</a>
+                @endif
 				
 				<?php } ?>
                 @if(Auth::guard('company')->user())

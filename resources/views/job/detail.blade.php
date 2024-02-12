@@ -4,9 +4,9 @@
 @include('includes.header') 
 <!-- Header end --> 
 
-@include('flash::message')
-@include('includes.inner_top_search')
 
+@include('includes.inner_top_search')
+@include('flash::message')
 
 @php
 $company = $job->getCompany();
@@ -127,7 +127,7 @@ $company = $job->getCompany();
 			<hr>
             <div class="jobButtons">
                 <a href="{{route('email.to.friend', $job->slug)}}" class="btn"><i class="fas fa-envelope" aria-hidden="true"></i> {{__('Email to Friend')}}</a>
-                @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug)) <a href="{{route('remove.from.favourite', $job->slug)}}" class="btn"><i class="fas fa-floppy-o" aria-hidden="true"></i> {{__('Favourite Job')}} </a> @else <a href="{{route('add.to.favourite', $job->slug)}}" class="btn"><i class="fas fa-floppy-o" aria-hidden="true"></i> {{__('Add to Favourite')}}</a> @endif
+                @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug)) <a href="{{route('remove.from.favourite', $job->slug)}}" class="btn"><i class="fas fa-floppy" aria-hidden="true"></i> {{__('Remove From Favourite Job')}} <i class="fas fa-times"></i></a> @else <a href="{{route('add.to.favourite', $job->slug)}}" class="btn"><i class="fas fa-floppy"></i> {{__('Add to Favourite')}}</a> @endif
                 <a href="{{route('report.abuse', $job->slug)}}" class="btn report"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> {{__('Report Abuse')}}</a>
             </div>
         </div>

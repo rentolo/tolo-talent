@@ -8,20 +8,24 @@
 @else
 <div class="alert
      alert-{{ $message['level'] }}
-     {{ $message['important'] ? 'alert-important' : '' }} popmessage"
+     {{ $message['important'] ? 'alert-important' : '' }} "
      role="alert"
      >
     @if ($message['important'])
     <button type="button"
             class="close"
-            data-dismiss="alert"
+            data-bs-dismiss="alert"
             aria-hidden="true"
             >&times;</button>
     @endif
     {!! $message['message'] !!}
-    
+    <button type="button"
+            class="close"
+            data-bs-dismiss="alert"
+            aria-hidden="true"
+            >&times;</button>
 </div>
-<div class="bgoverlay"></div>
+
 @endif
 @endforeach
 {{ session()->forget('flash_notification') }}

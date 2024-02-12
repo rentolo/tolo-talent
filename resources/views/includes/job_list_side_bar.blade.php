@@ -3,9 +3,7 @@
 	@if (Request::get('search') != '' || Request::get('functional_area_id') != '' || Request::get('country_id') != ''|| Request::get('state_id') != '' || Request::get('city_id') != ''|| Request::get('city_id') != '')
 	<a class="btn btn-job-alert" href="javascript:;">
 		<i class="fa fa-bell" style="font-size:1.125rem;"></i> {{__('Save Job Alert')}} </a>
-	@else
-	<a class="btn btn-job-alert-disabled" disabled href="javascript:;">
-		<i class="fa fa-bell" style="font-size:1.125rem;"></i> {{__('Save Job Alert')}}</a>
+	
 	@endif
 	
 	
