@@ -421,7 +421,7 @@ trait ProfileProjectsTrait
 
 
 
-        $returnHTML = view('admin.user.forms.project.project_thanks')->render();
+        $returnHTML = view('user.forms.project.project_thanks')->render();
 
         return response()->json(array('success' => true, 'status' => 200, 'html' => $returnHTML), 200);
 

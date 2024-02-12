@@ -67,7 +67,8 @@ class CompaniesController extends Controller
         if ($search != '') {
             $query->where('name', 'like', '%' . $search . '%');
         }
-       
+               
+        $query->where('is_active', true)->where('verified', true);
 
         $data['companies'] = $query->paginate(20);
         return view('company.listing')->with($data);

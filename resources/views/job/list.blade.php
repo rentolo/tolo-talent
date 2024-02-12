@@ -176,6 +176,9 @@
 
 </div>
 
+
+@if (Request::get('search') != '' || Request::get('functional_area_id') != '' || Request::get('country_id') != ''|| Request::get('state_id') != '' || Request::get('city_id') != ''|| Request::get('city_id') != '')
+
 <div class="modal fade" id="show_alert" role="dialog">
 
     <div class="modal-dialog">
@@ -204,7 +207,7 @@
 
                     <h4 class="modal-title">Job Alert</h4>
 
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
 
                 </div>
 
@@ -212,7 +215,7 @@
 
 					
 
-					<h3>Get the latest <strong>{{ ucfirst(Request::get('search')) }}</strong> jobs  @if(Request::get('location')!='') in <strong>{{ ucfirst(Request::get('location')) }}</strong>@endif sent straight to your inbox</h3>
+					<h3>Get the latest <strong>"{{ ucfirst(Request::get('search')) }}"</strong> jobs  @if(Request::get('location')!='') in <strong>{{ ucfirst(Request::get('location')) }}</strong>@endif sent straight to your inbox</h3>
 
 					
 
@@ -228,7 +231,7 @@
 
                 <div class="modal-footer">
 
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -243,6 +246,9 @@
     </div>
 
 </div>
+
+@endif
+
 
 @include('includes.footer')
 

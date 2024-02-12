@@ -38,10 +38,10 @@
 <div class="listpgWraper">
 <div class="container">
     <ul class="row compnaieslist">
-        @if($companies)
-        @foreach($companies as $company)
-     
-
+        @if($companies->isEmpty())
+            <p>No active and verified companies found.</p>
+        @else
+        @foreach($companies as $company)   
         <li class="col-lg-3 col-md-6">                
 					<div class="empint">
                     <a href="{{route('company.detail', $company->slug)}}" title="{{$company->name}}">
@@ -57,13 +57,6 @@
                     </a>					
 					</div>
 			</li>
-
-
-
-
-
-
-
         @endforeach
         @endif
 

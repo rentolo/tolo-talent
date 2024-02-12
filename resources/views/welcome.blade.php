@@ -19,7 +19,7 @@
 @include('includes.industries')
 <!-- industries ends --> 
 <!-- How it Works start -->
-@include('includes.how_it_works')
+<!--@include('includes.how_it_works')-->
 <!-- How it Works Ends -->
 
 

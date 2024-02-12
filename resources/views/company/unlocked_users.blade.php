@@ -77,7 +77,7 @@
                             
                             <div class="nodatabox">
                                 <h4>{{__('No Unlocked Seekers Found')}}</h4>
-                                <div class="viewallbtn mt-2"><a href="{{url('/jobs')}}">{{__('Search Jobs')}}</a></div>
+                                <div class="viewallbtn mt-2"><a href="{{url('/job-seekers')}}">{{__('Search Candidates')}}</a></div>
                             </div>
 
                         @endif

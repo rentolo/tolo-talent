@@ -120,34 +120,26 @@ class CompanyController extends Controller
                         ->filter(function ($query) use ($request) {
 
                             if ($request->has('name') && !empty($request->name)) {
-
                                 $query->where('companies.name', 'like', "%{$request->get('name')}%");
 
                             }
 
                             if ($request->has('payment_method') && !empty($request->payment_method)) {
-
                                 $query->where('companies.payment_method', 'like', "%{$request->get('payment_method')}%");
 
                             }
 
                             if ($request->has('package') && !empty($request->package)) {
-
                                 $query->where('companies.package_id',$request->get('package'));
 
                             }
 
-                            $query->where('package_start_date','!=','')->orderBy('package_start_date', 'DESC');
-
-                            
-                           
+                            $query->where('package_start_date','!=','')->orderBy('package_start_date', 'DESC');                           
 
                         })
 
                         ->addColumn('payment_method', function ($companies) {
-
                             return $companies->payment_method;
-
                         })
 
                         ->addColumn('package', function ($companies) {
@@ -156,32 +148,22 @@ class CompanyController extends Controller
 
                         })
 
-                        ->addColumn('package_start_date', function ($companies) {
-                            
+                        ->addColumn('package_start_date', function ($companies) {                            
                             return date('d-m-Y',strtotime($companies->package_start_date));
-
                         })
 
-                        ->addColumn('package_end_date', function ($companies) {
-                            
+                        ->addColumn('package_end_date', function ($companies) {                            
                             return date('d-m-Y',strtotime($companies->package_end_date));
-
                         })
 
 
                         ->rawColumns(['package_start_date', 'package_end_date'])
-
                         ->setRowId(function($companies) {
-
                             return 'companyDtRow' . $companies->id;
-
                         })
 
                         ->make(true);
-
-        //$query = $dataTable->getQuery()->get();
-
-        //return $query;
+      
 
     }
 
