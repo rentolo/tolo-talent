@@ -17,11 +17,7 @@
 <!-- Featured Jobs ends -->
 <!-- industries start -->
 @include('includes.industries')
-<!-- industries ends --> 
-<!-- How it Works start -->
-@include('includes.how_it_works')
-<!-- How it Works Ends -->
-
+<!-- industries ends -->
 
 <div class="infodatawrap">
 <!-- Login box start -->
@@ -38,9 +34,6 @@
 <!-- Testimonials start -->
 @include('includes.testimonials')
 <!-- Testimonials End -->
-<!-- Top Cities start -->
-@include('includes.top_cities')
-<!-- Top Cities End -->
 <!-- Video start -->
 @include('includes.video')
 <!-- Video end --> 
